@@ -1,3 +1,6 @@
+
+
+
 <?php
     class Movie {
 
@@ -10,16 +13,14 @@
             $this->duration= $_duration . 'min';
         }
         
-        /*public function howIsOld(){
+        public function howIsOld(){
             
-            echo(date("Y"));
 
-            $yearsOld = date("Y") - $this->$year;
+            $yearsOld = date("Y") - $this->year;
 
-            echo($yearsOld);
 
             return $yearsOld;
-        }/*/
+        }
 
     }
 
@@ -46,13 +47,21 @@
 
     $theNotebook->year = 2004;
 
-    echo('<pre>');
-    print_r($theHangover);
-    echo('</pre>');
+    echo('<div class="movie">');
+        echo('<p> Name: ' . $theHangover->name . '</p>');
+        echo('<p> Genre: ' . $theHangover->genre . '</p>');
+        echo('<p> Duration: ' . $theHangover->duration . '</p>');
+        echo('<p> Il film ' . $theHangover->name . ' è uscito ' . $theHangover->howIsOld() . ' anni fa</p>');
+    echo('</div>');
 
-    echo('<pre>');
-    print_r($theNotebook);
-    echo('</pre>');
+    echo('<hr>');
+
+    echo('<div class="movie">');
+        echo('<p> Name: ' . $theNotebook->name . '</p>');
+        echo('<p> Genre: ' . $theNotebook->genre . '</p>');
+        echo('<p> Duration: ' . $theNotebook->duration . '</p>');
+        echo('<p> Il film ' . $theNotebook->name . ' è uscito ' . $theNotebook->howIsOld() . ' anni fa</p>');
+    echo('</div>');
     
     ?>
 
