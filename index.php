@@ -8,17 +8,18 @@
         public $genre;
         public $year;
         
-       
+        // allego duration al construct
         public function __construct($_duration) {
             $this->duration= $_duration . 'min';
         }
         
+        // creo una funzione che calcola quanto tempo fa è uscito il film
         public function howIsOld(){
             
-
+            // faccio la data odierna con date("Y") meno l'anno di uscita del film
             $yearsOld = date("Y") - $this->year;
 
-
+            // e ottengo gli anni passati
             return $yearsOld;
         }
 
@@ -47,6 +48,8 @@
 
     $theNotebook->year = 2004;
 
+
+    // stampo i dati di The Hangover
     echo('<div class="movie">');
         echo('<p> Name: ' . $theHangover->name . '</p>');
         echo('<p> Genre: ' . $theHangover->genre . '</p>');
@@ -56,6 +59,8 @@
 
     echo('<hr>');
 
+
+    //stampo i dati di The notebook
     echo('<div class="movie">');
         echo('<p> Name: ' . $theNotebook->name . '</p>');
         echo('<p> Genre: ' . $theNotebook->genre . '</p>');
