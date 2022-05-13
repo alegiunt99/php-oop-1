@@ -1,6 +1,5 @@
 <?php
 
-
     class Movie {
         
         public $name;
@@ -12,5 +11,12 @@
         }
 
     }
+
+    // Creo 2 film
+    $hangover = new Movie();
+
+    $theNotebook = new Movie();
+
+    
 
 ?>
